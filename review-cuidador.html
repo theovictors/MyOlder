@@ -1,0 +1,96 @@
+<html>
+<meta charset="UTF8">
+
+
+<link href="./assets/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="./assets/fontawesome/css/all.css" rel="stylesheet" id="bootstrap-css">
+<link href="./perfil-cuidador.css" rel="stylesheet">
+<link href="./assets/star-rating.css" media="all" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="assets/css/article-lists/article-list-vertical.css">
+<script src="./assets/jquery-1.11.1.min.js"></script>
+<script src="./assets/bootstrap.min.js"></script>
+<script src="./assets/star-rating.js" type="text/javascript"></script>
+<script src="./perfil-cuidador.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<nav class="navbar navbar-inverse" style="border-radius: 0px;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        <a class="navbar-brand" href="#"><img src="./assets/images/logo-small.png" style="max-width: 100px;"></a>
+        </div>
+        <ul class="nav navbar-nav">
+        <li ><a href="./index.html">Cuidadores</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Raquel</a></li>
+        </ul>
+    </div>
+</nav> 
+
+<div class="col-lg-6 col-sm-6 col-sm-offset-3 col-lg-offset-3">
+    <div class="card hovercard">
+        <div class="card-background">
+            <img class="card-bkimg" alt="" src="assets/images/avatars/6.png">
+            <!-- http://lorempixel.com/850/280/people/9/ -->
+        </div>
+        <div class="useravatar">
+            <img alt="" src="assets/images/avatars/6.png">
+        </div>
+        <div class="card-info">
+            <span class="card-title">João da Silva</span>
+            <p style="margin: 10px 0 10px;">
+                    <span class="label label-success" style="margin-right: 3px;">Alzheimer</span><span class="label label-danger">Cardíaco</span>
+            </p>
+
+        </div>
+    </div>
+
+    <div class="panel panel-default" style="margin: 10px;">
+        <div class="panel-heading">Conte-nos como foi a experiência</div>
+        <div class="panel-body">
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+    </div>
+
+    <div class="panel panel-default" style="margin: 10px;">
+        <div class="panel-heading">Como você avalia o profissional?</div>
+        <div class="panel-body">
+            <input type="text" id="rating-system" class="kv-fa rating-loading" step="1" value="2" data-size="xs" title="">
+        </div>
+    </div>
+
+
+    <div class="col-sm-2 col-sm-offset-5" style="margin-top: 15px;">
+        <a href="#myModal" data-toggle="modal" type="button" class="btn trigger-btn btn-success">Enviar</a>
+    </div>
+    
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="icon-box">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body text-center">
+                    <h4>Obrigado!</h4>	
+                    <p>Esperamos que a sua experiência com a MyOlder tenha sido a melhor possível ;)</p>
+                    <button class="btn btn-success" data-dismiss="modal"><span>Fechar</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        $('#rating-system').rating('refresh', { disabled: false, showClear: true, showCaption: true });
+
+        $('#myModal').on('hidden.bs.modal', function (e) {
+            window.location.href = "./index.html";
+        });
+    </script>
+
+</html>
